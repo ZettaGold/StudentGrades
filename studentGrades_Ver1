@@ -1,19 +1,41 @@
-// include statements
+#include <iostream>
+#include <string>
+using namespace std;
 
-// main
+int main() 
+{
+	short nbStudents, studentGrade[20], bestGrade[20], worstGrade[20];
+	string studentNames[20];
+	
 
-// declare variables
+	cout << "\t LASALLE COLLEGE \n";
+	cout << "\t --------------- \n\n";
 
-// display title
+	do 
+	{
+		cout << "Enter number of students (max 20): ";
+		cin >> nbStudents;
+		
+	} while (nbStudents < 2 || nbStudents > 20);
+	
+	for (short I = 0; I < nbStudents; I++)
+	{
 
-// for loop to confirm >2 students <20 students
+		cout << "Enter name of student " << I + 1 << ": ";
+		cin.ignore(80, '\n');
+		getline(cin, studentNames[I]);
+		cout << "Enter grade: ";
+		cin >> studentGrade[I];
+		
+		if (studentGrade[I] > bestGrade[I])
+		{
+			bestGrade[I] = studentGrade[I];
+		}
 
-// Request & store name
+		cout << bestGrade[I];
+	}
 
-// Request & store grade
-
-// Display best grades
-
-// Display worst grades
-
-// Display averages
+	
+	system("pause");
+	return 0;
+}

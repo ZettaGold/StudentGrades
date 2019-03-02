@@ -7,8 +7,8 @@ using namespace std;
 int main()
 {
 	int nbStudents, grades[20], bestGrade = -1, worstGrade = 101;
-	string studentNames[20];
-	bool result;
+	string studentNames[20], result;
+
 
 	cout << "\t LASALLE COLLEGE \n";
 	cout << "\t --------------- \n";
@@ -40,13 +40,13 @@ int main()
 
 		if (grades[I] > 60 || grades[I] < 100)
 		{
-			result = true;
+			result = "Pass";
 			
 		}
 
 		else
 		{
-			result = false;
+			result = "Fail";
 			
 		}
 
@@ -57,16 +57,9 @@ int main()
 	
 	for (int I = 0; I < nbStudents; I++)
 	{
-		cout << studentNames[I] << setw(20) << grades[I] << result;
+		cout << studentNames[I] << setw(40) << grades[I] << setw(20) << result << endl;
 	}
 	
-	/*
-	cout << "Names";
-	cout << setw(20);
-	cout << "Grades";
-	cout << setw(20);
-	cout << "Results";
-*/
 	system("pause");
 	return 0;
 }

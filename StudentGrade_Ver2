@@ -1,0 +1,54 @@
+#include <iostream>
+#include <string>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+	int nbStudents, grades[20], bestGrade = -1, worstGrade = 101;
+	string studentNames[20];
+
+	cout << "\t LASALLE COLLEGE \n";
+	cout << "\t --------------- \n";
+
+
+	do {
+		cout << "Enter the number of students(max 20): ";
+		cin >> nbStudents;
+	} while (nbStudents < 2 || nbStudents > 20);
+
+	for (int I = 0; I < nbStudents; I++)
+	{
+		cout << "\nStudent " << I + 1 << endl;
+		cout << "name: ";
+		cin.ignore(80, '\n');
+		getline(cin, studentNames[I]);
+		cout << "grade: ";
+		cin >> grades[I];
+
+		if (bestGrade < grades[I])
+		{
+			bestGrade = grades[I];
+		}
+
+		if (worstGrade > grades[I])
+		{
+			worstGrade = grades[I];
+		}
+
+	}
+
+	cout << "The Class \n";
+
+
+	/*
+	cout << "Names";
+	cout << setw(20);
+	cout << "Grades";
+	cout << setw(20);
+	cout << "Results";
+*/
+	system("pause");
+	return 0;
+}

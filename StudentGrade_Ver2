@@ -8,6 +8,7 @@ int main()
 {
 	int nbStudents, grades[20], bestGrade = -1, worstGrade = 101;
 	string studentNames[20];
+	bool result;
 
 	cout << "\t LASALLE COLLEGE \n";
 	cout << "\t --------------- \n";
@@ -37,11 +38,28 @@ int main()
 			worstGrade = grades[I];
 		}
 
+		if (grades[I] > 60 || grades[I] < 100)
+		{
+			result = true;
+			
+		}
+
+		else
+		{
+			result = false;
+			
+		}
+
 	}
 
-	cout << "The Class \n";
-
-
+	cout << "The Class \n\n";
+	cout << "Names" << setw(40) << "Grades" << setw(20) << "Results \n\n\n";
+	
+	for (int I = 0; I < nbStudents; I++)
+	{
+		cout << studentNames[I] << setw(20) << grades[I] << result;
+	}
+	
 	/*
 	cout << "Names";
 	cout << setw(20);

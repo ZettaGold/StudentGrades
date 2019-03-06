@@ -1,0 +1,62 @@
+#include <iostream>
+#include <string>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+	short loadSection, mainMenu = 0, value[32];
+
+	
+		cout << "\t    CALCULATOR \n";
+		cout << "\t    ---------- \n";
+		cout << "\t By: Glenn Sacony\n";
+
+		cout << "1 - Addition \n";
+		cout << "2 - Subtraction \n";
+		cout << "3 - Multiplication \n";
+		cout << "4 - Division \n";
+		cout << "5 - Quit \n";
+		cout << "Enter your choice(1-5): ";
+		cin >> loadSection;
+	
+		if (loadSection == 1)
+		{
+			system("CLS");
+			cout << "\t CALCULATOR \n";
+			cout << "\t ---------- \n";
+			cout << "\t Addition\n";
+		}
+	
+	if (loadSection == 2)
+	{
+		system("CLS");
+		cout << "\t CALCULATOR \n";
+		cout << "\t ---------- \n";
+		cout << "\t Subtraction\n";
+	}
+	if (loadSection == 3)
+	{
+		system("CLS");
+		cout << "\t CALCULATOR \n";
+		cout << "\t ---------- \n";
+		cout << "\t Multiplication";
+	}
+	if (loadSection == 4)
+	{
+		system("CLS");
+		cout << "\t CALCULATOR \n";
+		cout << "\t ---------- \n";
+		cout << "\t Division";
+	}
+	if (loadSection == 5)
+	{
+		system("CLS");
+		cout << "System Quit";
+	}
+
+
+	system("pause");
+	return 0;
+}

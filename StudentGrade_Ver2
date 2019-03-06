@@ -25,8 +25,12 @@ int main()
 		cout << "name: ";
 		cin.ignore(80, '\n');
 		getline(cin, studentNames[I]);
-		cout << "grade: ";
-		cin >> grades[I];
+		do
+		{
+			cout << "grade: ";
+			cin >> grades[I];
+		} while (grades[I] < 0 || grades[I] > 100);
+		
 
 		if (bestGrade < grades[I])
 		{
@@ -38,27 +42,35 @@ int main()
 			worstGrade = grades[I];
 		}
 
-		if (grades[I] > 60 || grades[I] < 100)
+		if (grades[I] >= 60 && grades[I] <= 100)
 		{
 			result = "Pass";
-			
 		}
 
 		else
 		{
 			result = "Fail";
-			
 		}
 
 	}
 
 	cout << "The Class \n\n";
-	cout << "Names" << setw(40) << "Grades" << setw(20) << "Results \n\n\n";
+	cout << "Names" << setw(20) << "Grades" << setw(25) << "Results \n\n\n";
 	
 	for (int I = 0; I < nbStudents; I++)
 	{
-		cout << studentNames[I] << setw(40) << grades[I] << setw(20) << result << endl;
+		cout << left << setw(20) << studentNames[I] << left << setw(20) << grades[I] << left << setw(20) << result << endl;
+
+		if (bestGrade == grades[I])
+		{
+			cout << "The best student(s) \n";
+			studentNames[I];
+		}
 	}
+	
+	
+	
+
 	
 	system("pause");
 	return 0;

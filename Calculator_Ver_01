@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
 	short loadSection, mainMenu = 0, values;
-	int mathematicalValues, result = 0;
+	int mathematicalValues, result = 0, division;
 
 	
 		cout << "\t    CALCULATOR \n";
@@ -88,16 +88,13 @@ int main()
 		cout << "\t CALCULATOR \n";
 		cout << "\t ---------- \n";
 		cout << "\t Division \n";
-		cout << "Enter the number of values to divide: ";
+		cout << "Enter the number to divide: ";
 		cin >> values;
-
-		for (int I = 0; I < values; I++)
-		{
-			cout << "Value " << I + 1 << ": ";
-			cin >> mathematicalValues;
-			result = mathematicalValues % result;
-			cout << "The result is: " << result << endl;
-		}
+		cout << "Enter the divider: ";
+		cin >> division;
+		result = values / division;
+		cout << "The result is: " << result << endl;
+		
 
 
 	}

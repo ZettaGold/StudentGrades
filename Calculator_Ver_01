@@ -6,7 +6,8 @@ using namespace std;
 
 int main()
 {
-	short loadSection, mainMenu = 0, values, mathematicalValues, result = 0;
+	short loadSection, mainMenu = 0, values;
+	int mathematicalValues, result = 0;
 
 	
 		cout << "\t    CALCULATOR \n";
@@ -23,6 +24,7 @@ int main()
 	
 		if (loadSection == 1)
 		{
+			result = 0;
 			system("CLS");
 			cout << "\t CALCULATOR \n";
 			cout << "\t ---------- \n";
@@ -43,6 +45,7 @@ int main()
 		
 	if (loadSection == 2)
 	{
+		result = 0;
 		system("CLS");
 		cout << "\t CALCULATOR \n";
 		cout << "\t ---------- \n";
@@ -62,6 +65,7 @@ int main()
 	}
 	if (loadSection == 3)
 	{
+		result++;
 		system("CLS");
 		cout << "\t CALCULATOR \n";
 		cout << "\t ---------- \n";
@@ -79,10 +83,23 @@ int main()
 	}
 	if (loadSection == 4)
 	{
+		result++;
 		system("CLS");
 		cout << "\t CALCULATOR \n";
 		cout << "\t ---------- \n";
-		cout << "\t Division";
+		cout << "\t Division \n";
+		cout << "Enter the number of values to divide: ";
+		cin >> values;
+
+		for (int I = 0; I < values; I++)
+		{
+			cout << "Value " << I + 1 << ": ";
+			cin >> mathematicalValues;
+			result = mathematicalValues % result;
+			cout << "The result is: " << result << endl;
+		}
+
+
 	}
 	if (loadSection == 5)
 	{

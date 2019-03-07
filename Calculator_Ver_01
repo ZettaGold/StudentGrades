@@ -40,7 +40,7 @@ int main()
 
 			}
 		}
-		result = 0;
+		
 	if (loadSection == 2)
 	{
 		system("CLS");
@@ -55,17 +55,27 @@ int main()
 		{
 			cout << "Value " << I + 1 << ": ";
 			cin >> mathematicalValues;
-			result = mathematicalValues - result;
+			result = result - mathematicalValues;
 			cout << "The result is: " << result << endl;
-		
-
 		}
+
+	}
 	if (loadSection == 3)
 	{
 		system("CLS");
 		cout << "\t CALCULATOR \n";
 		cout << "\t ---------- \n";
-		cout << "\t Multiplication";
+		cout << "\t Multiplication \n";
+		cout << "Enter the number of values to multiply: ";
+		cin >> values;
+
+		for (int I = 0; I < values; I++)
+		{
+			cout << "Value " << I + 1 << ": ";
+			cin >> mathematicalValues;
+			result = result * mathematicalValues;
+			cout << "The result is: " << result << endl;
+		}
 	}
 	if (loadSection == 4)
 	{

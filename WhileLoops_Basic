@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int mainMenu = 0, repeat;
+	
+	while (mainMenu == 0)
+	{
+		cout << "Calculator \n";
+		cout << "Enter 1 for addition \n";
+		cout << "Enter 2 for subtraction \n";
+		cout << "Enter 3 for multiplication \n";
+		cout << "Enter 4 for division \n";
+		cin >> mainMenu;
+
+		while (mainMenu == 1)
+		{
+			system("CLS");
+			cout << "Addition \n";
+			cout << "Do you want to repeat? y/n";
+			cin >> repeat;
+			if (repeat == 'y' || repeat == 'Y')
+			{
+				
+				mainMenu = 1;
+			}
+			else
+			{
+				
+				mainMenu = 0;
+			}
+		}
+	}
+}

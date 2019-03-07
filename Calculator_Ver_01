@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-	short loadSection, mainMenu = 0, values, additionValues;
+	short loadSection, mainMenu = 0, values, mathematicalValues, result = 0;
 
 	
 		cout << "\t    CALCULATOR \n";
@@ -29,24 +29,37 @@ int main()
 			cout << "\t Addition\n";
 			cout << "Enter the number of values to add: ";
 			cin >> values;
+			
 
 			for (int I = 0; I < values; I++)
 			{
 				cout << "Value " << I + 1 << ": ";
-				cin >> additionValues;
-				cout << "The result is: " << result;
+				cin >> mathematicalValues;
+				result = mathematicalValues + result;
+				cout << "The result is: " << result << endl;
+
 			}
 		}
-	
+		result = 0;
 	if (loadSection == 2)
 	{
 		system("CLS");
 		cout << "\t CALCULATOR \n";
 		cout << "\t ---------- \n";
 		cout << "\t Subtraction\n";
+		cout << "Enter the number of values to subtract: ";
+		cin >> values;
+
+
+		for (int I = 0; I < values; I++)
+		{
+			cout << "Value " << I + 1 << ": ";
+			cin >> mathematicalValues;
+			result = mathematicalValues - result;
+			cout << "The result is: " << result << endl;
 		
 
-	}
+		}
 	if (loadSection == 3)
 	{
 		system("CLS");
